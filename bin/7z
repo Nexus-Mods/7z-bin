@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+let args = process.argv.slice(2)
+
+let exeName = {
+  win32: '7z.exe'
+}[process.platform] || '7z';
+
+let cp = require('child_process');
+
+let proc = cp.spawn(exeName, args);
+
+proc.stdout.on('data', data => console.log(data.toString()));
+proc.stderr.on('data', data => console.error(data.toString()));
+proc.on('close', (code) => { if (code != 0) { console.log('process ended', code); } });
+

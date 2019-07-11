@@ -1,8 +1,11 @@
 {
   "name": "7z-bin",
-  "version": "18.5.0",
+  "version": "19.0.0-r1",
   "description": "7zip binaries",
   "main": "index.js",
   "author": "",
-  "license": "SEE LICENSE IN license.txt"
+  "license": "SEE LICENSE IN license.txt",
+  "bin": {
+    "7z": "./bin/7z"
+  }
 }
