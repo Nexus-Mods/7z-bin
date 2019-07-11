@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-let args = process.argv.slice(2)
+let args = process.argv.slice(2);
+let path = require('path');
 
 let exeName = {
-  win32: '7z.exe'
+  win32: path.resolve(__dirname, '..', 'win', '7z.exe'),
 }[process.platform] || '7z';
 
 let cp = require('child_process');
