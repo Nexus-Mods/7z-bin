@@ -1,6 +1,6 @@
 {
   "name": "7z-bin",
-  "version": "21.0.7",
+  "version": "22.0.1",
   "description": "7zip binaries",
   "main": "index.js",
   "author": "",
